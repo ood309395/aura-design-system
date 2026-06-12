@@ -1,0 +1,49 @@
+name: New Component Proposal
+description: Submit a proposal for a new design system component
+title: "Component: "
+labels:
+  - component: new
+  - needs-review
+
+body:
+  - type: markdown
+    attributes:
+      value:  |
+        Please complete all sections before submitting a proposal.
+
+  - type: input
+    id: figma_prototype
+    attributes:
+      label: Figma prototype URL
+      placeholder: https://www.figma.com/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_problem
+    attributes: 
+      label: User Problem Statement
+      description: Describe the problem this component solves.
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: api_status
+    attributes: 
+      label: API Status
+      options:
+        - Proposed
+        - In Review
+    validations: 
+      required: true
+
+  - type: checkboxes
+    id: accessibility_compliance
+    attributes: 
+      label: Accessibility Compliance
+      options:
+        - label: Keyboard navigation has been reviewed
+        - label: Screen reader compatibility has been reviewed
+        - label: Color contrast requirements have been verified
+    validations:
+      required: true
